@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <title>阅读javaScript数据结构与算法随笔 | haocaiMP的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="JavaScript,html">
+    <meta name="description" content="随笔使用类进行面向对象开发 
+1234567891011class Book &amp;#123;  constructor (title, pages, isbn) &amp;#123;    this.title = title;    this.pages = pages;    this.isbn = isbn;  &amp;#125;  printIsbn()&amp;#123;    console.log(this.isbn);  &amp;#125;&amp;#125;只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类
+继承
+12345678910class ITBook extends Book &amp;...">
+    
+        <link rel="icon" href="https://gw.alicdn.com/tfs/TB1lYfqXRGw3KVjSZFDXXXWEpXa-460-460.jpg">
+    
+    
+        
+            <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+        
+            <link rel="stylesheet" href="/css/stage.css">
+        
+            <link rel="stylesheet" href="/css/avatar-bg.css">
+        
+    
+</head>
+</html>
+<body>
+<header id="header">
+    <div class="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="header-main">
+        <h1><a href="/">haocaiMP的博客</a></h1>
+    </div>
+    <div id="nav">
+        <div class="nav-img" id="nav-img"></div>
+        <div class="sentences">
+            云里写诗，泥里生活，岁月里洒脱。
+        </div>
+    </div>
+</header>
+
+<div id="content-outer">
+    <div id="content-inner">
+        <div class="clearfix">
+    <article id="post">
+        <h1>阅读javaScript数据结构与算法随笔</h1>
+        <div class="create">
+            <span>创建于</span>
+            
+                <time datetime="2019-05-22T10:26:10.000Z">
+                    2019-05-22
+                </time>
+            
+            
+        </div>
+        <h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a><center><strong>随笔</strong></center></h2><p>使用类进行面向对象开发 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">  constructor (title, pages, isbn) &#123;</span><br><span class="line">    this.title = title;</span><br><span class="line">    this.pages = pages;</span><br><span class="line">    this.isbn = isbn;</span><br><span class="line">  &#125;</span><br><span class="line">  printIsbn()&#123;</span><br><span class="line">    console.log(this.isbn);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类</span><br></pre></td></tr></table></figure>
+<p>继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class ITBook extends Book &#123;</span><br><span class="line">  constructor (title, pages, isbn, technology) &#123;</span><br><span class="line">    super(title, pages, isbn);</span><br><span class="line">    this.technology = technology;</span><br><span class="line">  &#125;</span><br><span class="line">  printTechnology()&#123;</span><br><span class="line">    console.log(this.technology);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line">我们可以用extends关键字扩展一个类并继承它的行为。在构造函数中，我们可以通过super关键字引用父类的构造函数</span><br></pre></td></tr></table></figure>
+<p>栈  后进先出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">let Stack = (function () &#123;</span><br><span class="line">  const items = new WeakMap();</span><br><span class="line">  class Stack &#123;</span><br><span class="line">    constructor () &#123;</span><br><span class="line">      items.set(this, []);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  push(element) &#123;</span><br><span class="line">    let s = items.get(this);</span><br><span class="line">    s.push(element);</span><br><span class="line">  &#125;</span><br><span class="line">  pop() &#123;</span><br><span class="line">    let s = items.get(this);</span><br><span class="line">    let r = s.pop();</span><br><span class="line">    return r;</span><br><span class="line">  &#125;</span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    let s = items.get(this);</span><br><span class="line">    return s.length == 0</span><br><span class="line">  &#125;</span><br><span class="line">  size() &#123;</span><br><span class="line">    let s = items.get(this);</span><br><span class="line">    return s.length</span><br><span class="line">  &#125;</span><br><span class="line">  clear() &#123;</span><br><span class="line">    let s = items.get(this);</span><br><span class="line">    s.length = 0;</span><br><span class="line">    // s = []</span><br><span class="line">  &#125;</span><br><span class="line">  return Stack;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p> 队  先进先出 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">let Queue2 = (function () &#123;</span><br><span class="line">  const items = new WeakMap();</span><br><span class="line">  class Queue2 &#123;</span><br><span class="line">    constructor () &#123;</span><br><span class="line">      items.set(this, []);</span><br><span class="line">    &#125;</span><br><span class="line">    enqueue(element) &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      q.push(element);</span><br><span class="line">    &#125;</span><br><span class="line">    dequeue() &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      let r = q.shift();</span><br><span class="line">      return r;</span><br><span class="line">    &#125;</span><br><span class="line">    front() &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      return q[0]</span><br><span class="line">    &#125;</span><br><span class="line">    isEmpty() &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      return q.length == 0</span><br><span class="line">    &#125;</span><br><span class="line">    size() &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      return q.length</span><br><span class="line">    &#125;</span><br><span class="line">    print() &#123;</span><br><span class="line">      let q = items.get(this);</span><br><span class="line">      console.log(q.toString())</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return Queue2;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+        <div>
+            <ul class="tags-category-list"><li class="tags-category-list-item"><a class="tags-category-list-link" href="/tags/javaScript/">javaScript</a></li></ul>
+        </div>
+        <div class="bottom-line"></div>
+        
+    <nav id="article-nav">
+        
+        
+            <a href="/2019/05/22/react/" id="article-nav-older" class="article-nav-link-wrap">
+                <strong class="article-nav-caption">&lt;</strong>
+                <span class="article-nav-title">
+                    
+                        React.js
+                </span>
+                
+            </a>
+        
+    </nav>
+
+
+        
+    </article>
+    <div id="toc">
+        
+            <h2>文章目录</h2>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#随笔"><span class="toc-number">1.</span> <span class="toc-text">随笔</span></a></li></ol>
+        
+    </div>
+</div>
+
+    </div>
+</div>
+<footer id="footer">
+    <div id="copyright">&copy; haocaiMP  2019</div>
+    <div id="theme">
+        Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/markyong/hexo-theme-stage">Stage</a>
+    </div>
+</footer>
+<script src="/lib/js/waterrippleeffect.min.js"></script>
+<script src="/js/header-bg.main.js"></script>
+
+    <script src="/lib/js/smooth-scroll.min.js"></script>
+    <script src="/js/toc.main.js"></script>
+
+</body>
+</html>
