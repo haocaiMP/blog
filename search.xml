@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[阅读javaScript数据结构与算法随笔]]></title>
+    <url>%2Fblog%2F2019%2F05%2F22%2F%E9%98%85%E8%AF%BBjavaScript%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%9A%8F%E7%AC%94%2F</url>
+    <content type="text"><![CDATA[随笔使用类进行面向对象开发 1234567891011class Book &#123; constructor (title, pages, isbn) &#123; this.title = title; this.pages = pages; this.isbn = isbn; &#125; printIsbn()&#123; console.log(this.isbn); &#125;&#125;只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类 继承 12345678910class ITBook extends Book &#123; constructor (title, pages, isbn, technology) &#123; super(title, pages, isbn); this.technology = technology; &#125; printTechnology()&#123; console.log(this.technology); &#125; &#125;我们可以用extends关键字扩展一个类并继承它的行为。在构造函数中，我们可以通过super关键字引用父类的构造函数 栈 后进先出 12345678910111213141516171819202122232425262728293031let Stack = (function () &#123; const items = new WeakMap(); class Stack &#123; constructor () &#123; items.set(this, []); &#125; &#125; push(element) &#123; let s = items.get(this); s.push(element); &#125; pop() &#123; let s = items.get(this); let r = s.pop(); return r; &#125; isEmpty() &#123; let s = items.get(this); return s.length == 0 &#125; size() &#123; let s = items.get(this); return s.length &#125; clear() &#123; let s = items.get(this); s.length = 0; // s = [] &#125; return Stack;&#125;)(); 队 先进先出 12345678910111213141516171819202122232425262728293031323334let Queue2 = (function () &#123; const items = new WeakMap(); class Queue2 &#123; constructor () &#123; items.set(this, []); &#125; enqueue(element) &#123; let q = items.get(this); q.push(element); &#125; dequeue() &#123; let q = items.get(this); let r = q.shift(); return r; &#125; front() &#123; let q = items.get(this); return q[0] &#125; isEmpty() &#123; let q = items.get(this); return q.length == 0 &#125; size() &#123; let q = items.get(this); return q.length &#125; print() &#123; let q = items.get(this); console.log(q.toString()) &#125; &#125; return Queue2;&#125;)();]]></content>
+      <tags>
+        <tag>javaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[React.js]]></title>
+    <url>%2Fblog%2F2019%2F05%2F22%2Freact%2F</url>
+    <content type="text"><![CDATA[敬请期待]]></content>
+  </entry>
+</search>
