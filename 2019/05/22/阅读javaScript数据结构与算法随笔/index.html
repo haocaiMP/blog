@@ -59,6 +59,7 @@
       
         <h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a><center><strong>随笔</strong></center></h2><p>使用类进行面向对象开发 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">  constructor (title, pages, isbn) &#123;</span><br><span class="line">    this.title = title;</span><br><span class="line">    this.pages = pages;</span><br><span class="line">    this.isbn = isbn;</span><br><span class="line">  &#125;</span><br><span class="line">  printIsbn()&#123;</span><br><span class="line">    console.log(this.isbn);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>继承</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class ITBook extends Book &#123;</span><br><span class="line">  constructor (title, pages, isbn, technology) &#123;</span><br><span class="line">    super(title, pages, isbn);</span><br><span class="line">    this.technology = technology;</span><br><span class="line">  &#125;</span><br><span class="line">  printTechnology()&#123;</span><br><span class="line">    console.log(this.technology);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line">我们可以用extends关键字扩展一个类并继承它的行为。在构造函数中，我们可以通过super关键字引用父类的构造函数</span><br></pre></td></tr></table></figure>
 <p>栈  后进先出</p>
@@ -69,7 +70,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" data-id="cjw0hh5790000j32y91opd7b2" class="article-share-link">分享</a>
+      <a data-url="http://haocaiMP.github.io/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" data-id="cjw1j9eh50000sy2yfjf1rzke" class="article-share-link">分享</a>
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javaScript/">javaScript</a></li></ul>
 
@@ -94,6 +95,26 @@
 
   
     
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '91a4ad66f73b786eee9b',
+      clientSecret: '70f21a3630d038b2a0c44dc4325f98d60118ea69',
+      repo: 'gitalk',
+      owner: 'haocaiMP',
+      admin: ['haocaiMP'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
   
 
 </article>
