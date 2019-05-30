@@ -11,6 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
+    数组去重 |
     
     haocaiMP的博客</title>
   
@@ -25,53 +26,17 @@
 </html>
 <body>
 <main class="content">
-  <section class="jumbotron">
-  <div class="video">
-    
-      <div class="video-frame">
-        <img src="/blog/images/ocean/overlay-hero.png" alt="Decorative image frame">
-      </div>
-    
-    <div class="video-media">
-      <video playsinline autoplay loop muted data-autoplay poster="/blog/images/ocean/ocean.png" x5-video-player-type="h5">
-        <source src="/blog/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/blog/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/blog/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="video-inner text-center text-white">
-      <h1><a href="/blog/">haocaiMP的博客</a></h1>
-      <p>记录成长，记录生活</p>
-      <div>
-        <a href="https://github.com/haocaiMP" class="url" target="_blank"><img src="/blog/images/github.svg" class="brand" alt="haocaiMP的博客"></a>
-      </div>
-    </div>
-    <div class="video-learn-more">
-      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
-    </div>
-  </div>
-</section>
-
-<div id="landingpage">
   <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-
-    
-      
-        <article id="post-array数组去重" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-array数组去重" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/05/30/array数组去重/">数组去重</a>
-    </h2>
+    <h1 class="article-title" itemprop="name">
+      数组去重
+    </h1>
   
 
       </header>
@@ -109,6 +74,41 @@
   </div>
 
   
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">阅读javaScript数据结构与算法随笔</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '91a4ad66f73b786eee9b',
+      clientSecret: '70f21a3630d038b2a0c44dc4325f98d60118ea69',
+      repo: 'gitalk',
+      owner: 'haocaiMP',
+      admin: ['haocaiMP'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
 
   
 
@@ -116,117 +116,7 @@
 
 
 
-      
-        <article id="post-阅读javaScript数据结构与算法随笔" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/">阅读javaScript数据结构与算法随笔</a>
-    </h2>
-  
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" class="article-date">
-  <time datetime="2019-05-22T10:26:10.000Z" itemprop="datePublished">2019-05-22</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a><center><strong>随笔</strong></center></h2><p>使用类进行面向对象开发 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">  constructor (title, pages, isbn) &#123;</span><br><span class="line">    this.title = title;</span><br><span class="line">    this.pages = pages;</span><br><span class="line">    this.isbn = isbn;</span><br><span class="line">  &#125;</span><br><span class="line">  printIsbn()&#123;</span><br><span class="line">    console.log(this.isbn);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-link" href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/">Read More...</a>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" data-id="cjwahvmex0003f12y30uaj84w" class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javaScript/">javaScript</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-
-
-
-      
-        <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/05/22/react/">React.js</a>
-    </h2>
-  
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="/blog/2019/05/22/react/" class="article-date">
-  <time datetime="2019-05-22T01:58:05.485Z" itemprop="datePublished">2019-05-22</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h2 id="敬请期待"><a href="#敬请期待" class="headerlink" title="敬请期待"></a>敬请期待</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/05/22/react/" data-id="cjwahvm9t0000f12yoqtcz337" class="article-share-link">分享</a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-
-
-
-      
-  </article>
-  
-  
 </section>
-</div>
-
   <footer class="footer">
   
   <div class="outer">
