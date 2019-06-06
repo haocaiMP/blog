@@ -58,7 +58,9 @@
       searchFunc("/blog/search.xml", 'local-search-input', 'local-search-result');
     });
   } else {
-    document.getElementById("videoID").play();
+    if(location.pathname == '/blog' || location.pathname == '/blog/') {
+      document.getElementById("videoID").play();
+    }
     document.addEventListener("WeixinJSBridgeReady", function() {
       document.getElementById("videoID").play();
     })
@@ -180,6 +182,8 @@
   };
 
   $('.navbar-toggle').on('click', function () {
+    console.log('111')
+    console.log(isMobileNavAnim)
     if (isMobileNavAnim) return;
     startMobileNavAnim();
     $content.toggleClass('on');
