@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    相册 |
+    React.js |
     
     haocaiMP的博客</title>
   
@@ -28,7 +28,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
@@ -36,7 +36,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      React.js
     </h1>
   
 
@@ -44,51 +44,68 @@
     
 
     
+      <div class="article-meta">
+        <a href="/blog/2019/06/06/react/" class="article-date">
+  <time datetime="2019-06-06T09:50:00.000Z" itemprop="datePublished">2019-06-06</time>
+</a>
+        
+      </div>
+    
 
     <div class="article-entry" itemprop="articleBody">
       
-  <div class="article-albums">
-    <ul class="article-albums-photos">
-      
-        <li class="article-albums-item" data-scroll-reveal>
-          <a class="article-albums-img fancybox" data-fancybox="images" data-caption="头像" href="https://gw.alicdn.com/tfs/TB1lYfqXRGw3KVjSZFDXXXWEpXa-460-460.jpg" rel="gallery_cjwk2ryo80009ef2yn4bysr7u" title="头像">
-            <img class="lazy" data-original="https://gw.alicdn.com/tfs/TB1lYfqXRGw3KVjSZFDXXXWEpXa-460-460.jpg" itemprop="image" alt="头像" width height>
-          </a>
-          
-            <span class="article-albums-caption">  头像  </span>
-          
-        </li>
-      
-        <li class="article-albums-item" data-scroll-reveal>
-          <a class="article-albums-img fancybox" data-fancybox="images" data-caption="头像" href="https://gw.alicdn.com/tfs/TB1lYfqXRGw3KVjSZFDXXXWEpXa-460-460.jpg" rel="gallery_cjwk2ryo80009ef2yn4bysr7u" title="头像">
-            <img class="lazy" data-original="https://gw.alicdn.com/tfs/TB1lYfqXRGw3KVjSZFDXXXWEpXa-460-460.jpg" itemprop="image" alt="头像" width height>
-          </a>
-          
-            <span class="article-albums-caption">  头像  </span>
-          
-        </li>
-      
-    </ul>
-  </div>
-
 
       
 
       
-        
+        <h2 id="敬请期待"><a href="#敬请期待" class="headerlink" title="敬请期待"></a>敬请期待</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/gallery/index.html" data-id="cjwk2ryo80009ef2yn4bysr7u" class="article-share-link">分享</a>
+      <a data-url="http://haocaiMP.github.io/blog/2019/06/06/react/" data-id="cjwk2ryng0000ef2yr1bptbfm" class="article-share-link">分享</a>
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/React-js/">React.js</a></li></ul>
+
     </footer>
 
   </div>
 
   
     
+  <nav class="article-nav">
+    
+    
+      <a href="/blog/2019/06/05/common/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">自用方法汇总</div>
+      </a>
+    
+  </nav>
+
 
   
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '91a4ad66f73b786eee9b',
+      clientSecret: '70f21a3630d038b2a0c44dc4325f98d60118ea69',
+      repo: 'gitalk',
+      owner: 'haocaiMP',
+      admin: ['haocaiMP'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
 
   
 

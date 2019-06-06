@@ -11,6 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
+    自用方法汇总 |
     
     haocaiMP的博客</title>
   
@@ -26,104 +27,17 @@
 </html>
 <body>
 <main class="content">
-  <section class="jumbotron">
-  <div class="video">
-    
-      <div class="video-frame">
-        <img src="/blog/images/ocean/overlay-hero.png" alt="Decorative image frame">
-      </div>
-    
-    <div class="video-media">
-      <video playsinline autoplay loop muted data-autoplay poster="/blog/images/ocean/ocean.png" x5-video-player-type="h5" id="videoID">
-        <source src="/blog/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/blog/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/blog/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="video-inner text-center text-white">
-      <h1><a href="/blog/">haocaiMP的博客</a></h1>
-      <p>记录成长，记录生活</p>
-      <div>
-        <a href="https://github.com/haocaiMP" class="url" target="_blank"><img src="/blog/images/github.svg" class="brand" alt="haocaiMP的博客"></a>
-      </div>
-    </div>
-    <div class="video-learn-more">
-      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
-    </div>
-  </div>
-</section>
-
-<div id="landingpage">
   <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-
-    
-      
-        <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-common" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/06/06/react/">React.js</a>
-    </h2>
-  
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="/blog/2019/06/06/react/" class="article-date">
-  <time datetime="2019-06-06T09:50:00.000Z" itemprop="datePublished">2019-06-06</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h2 id="敬请期待"><a href="#敬请期待" class="headerlink" title="敬请期待"></a>敬请期待</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/06/06/react/" data-id="cjwk2ryng0000ef2yr1bptbfm" class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/React-js/">React.js</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-
-
-
-      
-        <article id="post-common" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/06/05/common/">自用方法汇总</a>
-    </h2>
+    <h1 class="article-title" itemprop="name">
+      自用方法汇总
+    </h1>
   
 
       </header>
@@ -195,6 +109,50 @@
   </div>
 
   
+    
+  <nav class="article-nav">
+    
+      <a href="/blog/2019/06/06/react/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            React.js
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2019/05/30/array数组去重/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">数组去重</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '91a4ad66f73b786eee9b',
+      clientSecret: '70f21a3630d038b2a0c44dc4325f98d60118ea69',
+      repo: 'gitalk',
+      owner: 'haocaiMP',
+      admin: ['haocaiMP'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
 
   
 
@@ -202,123 +160,7 @@
 
 
 
-      
-        <article id="post-array数组去重" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/05/30/array数组去重/">数组去重</a>
-    </h2>
-  
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="/blog/2019/05/30/array数组去重/" class="article-date">
-  <time datetime="2019-05-30T10:44:10.000Z" itemprop="datePublished">2019-05-30</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a><center><b>数组去重</b></center></h2><h3 id="数组去重是我们工作和学习中经常遇到的问题，我在这里总结几个常用的写法"><a href="#数组去重是我们工作和学习中经常遇到的问题，我在这里总结几个常用的写法" class="headerlink" title="数组去重是我们工作和学习中经常遇到的问题，我在这里总结几个常用的写法"></a>数组去重是我们工作和学习中经常遇到的问题，我在这里总结几个常用的写法</h3><h3 id="最基本排序-indexOf"><a href="#最基本排序-indexOf" class="headerlink" title="最基本排序(indexOf)"></a>最基本排序(indexOf)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">* 根据数组indexOf方法判断数据是否存在（不存在为-1）</span><br><span class="line">* indexOf IE8 以下不支持</span><br><span class="line">* */</span><br><span class="line">function unique(arr)&#123;</span><br><span class="line">  var n=[];</span><br><span class="line">  for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    if(n.indexOf(arr[i])==-1)&#123;</span><br><span class="line">      n.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="先排序-再相邻比较"><a href="#先排序-再相邻比较" class="headerlink" title="先排序 再相邻比较"></a>先排序 再相邻比较</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">* 给传入数组排序，排序后相同值相邻，</span><br><span class="line">* 然后遍历时,新数组只加入不与前一值重复的值。</span><br><span class="line">* 会打乱原来数组的顺序</span><br><span class="line">* */</span><br><span class="line">function unique1(arr) &#123;</span><br><span class="line">  arr.sort();</span><br><span class="line">  var n = [arr[0]];</span><br><span class="line">  for (var i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">      if (arr[i] !== n[n.length - 1]) &#123;</span><br><span class="line">          n.push(arr[i]);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="双层循环"><a href="#双层循环" class="headerlink" title="双层循环"></a>双层循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function unique2(arr)&#123;</span><br><span class="line">  var n=[];</span><br><span class="line">  for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    for (var j = i+1; j &lt; arr.length; j++) &#123;</span><br><span class="line">      if(arr[i]===arr[j])&#123;</span><br><span class="line">        ++i;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    n.push(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  return n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用fliter去重"><a href="#使用fliter去重" class="headerlink" title="使用fliter去重"></a>使用fliter去重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function unique(arr) &#123;</span><br><span class="line">  return arr.filter(function(item, index, arr) &#123;</span><br><span class="line">    //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素</span><br><span class="line">    return arr.indexOf(item, 0) === index;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="es6"><a href="#es6" class="headerlink" title="es6"></a>es6</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function unique(arr) &#123;</span><br><span class="line">  return Array.from(new Set(arr))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/05/30/array数组去重/" data-id="cjwk2ryno0003ef2yavcic5lv" class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javaScript/">javaScript</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-
-
-
-      
-        <article id="post-阅读javaScript数据结构与算法随笔" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/">阅读javaScript数据结构与算法随笔</a>
-    </h2>
-  
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" class="article-date">
-  <time datetime="2019-05-22T10:26:10.000Z" itemprop="datePublished">2019-05-22</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a><center><strong>随笔</strong></center></h2><p>使用类进行面向对象开发 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">  constructor (title, pages, isbn) &#123;</span><br><span class="line">    this.title = title;</span><br><span class="line">    this.pages = pages;</span><br><span class="line">    this.isbn = isbn;</span><br><span class="line">  &#125;</span><br><span class="line">  printIsbn()&#123;</span><br><span class="line">    console.log(this.isbn);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">只需要使用class关键字，声明一个有constructor函数和诸如printIsbn等其他函数的类</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-link" href="/blog/2019/05/22/阅读javaScript数据结构与算法随笔/">Read More...</a>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://haocaiMP.github.io/blog/2019/05/22/阅读javaScript数据结构与算法随笔/" data-id="cjwk2rynk0001ef2yjcceywpw" class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javaScript/">javaScript</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-
-
-
-      
-  </article>
-  
-  
 </section>
-</div>
-
   <footer class="footer">
   
   <div class="outer">
