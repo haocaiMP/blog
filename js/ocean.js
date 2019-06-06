@@ -14,10 +14,7 @@
       callback && callback();
     }, searchAnimDuration);
   };
-  document.getElementById("videoID").play();
-  document.addEventListener("WeixinJSBridgeReady", function() {
-    document.getElementById("videoID").play();
-  })
+  
   $('.nav-item-search').on('click', function () {
     if (isSearchAnim) return;
     startSearchAnim();
@@ -60,6 +57,11 @@
     $.getScript('/blog/js/search.js', function () {
       searchFunc("/blog/search.xml", 'local-search-input', 'local-search-result');
     });
+  } else {
+    document.getElementById("videoID").play();
+    document.addEventListener("WeixinJSBridgeReady", function() {
+      document.getElementById("videoID").play();
+    })
   }
 
   // Share ------------
